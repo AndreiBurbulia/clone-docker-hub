@@ -25,4 +25,4 @@ jobs:
           docker build -t andreiburbulia/boolgram .
     - name: Docker push
       run: |
-          docker push <hub-user>/<repo-name>:<tag>
+          docker push andreiburbulia/boolgram
