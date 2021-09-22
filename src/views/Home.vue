@@ -1,18 +1,43 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <LoadingComponent v-if="showComponent" />
+    <MainComponent />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import MainComponent from "@/components/MainComponent.vue";
+import LoadingComponent from "@/components/LoadingComponent.vue";
+// import ErrorComponent from "@/components/ErrorComponent.vue";
+
+// const MainComponent = () => ({
+//   component: import(/* */"@/components/MainComponent"),
+//   loading: LoadingComponent,
+//   error: ErrorComponent,
+//   timeout: 3000,
+// });
 
 export default {
-  name: "Home",
+  data() {
+    return {
+      showComponent: true,
+    };
+  },
   components: {
-    HelloWorld,
+    MainComponent,
+    LoadingComponent,
+  },
+  methods: {
+    show() {
+      this.showComponent = false;
+    },
+  },
+
+  mounted() {
+    setTimeout(() => {
+      this.show();
+    }, 2000);
   },
 };
 </script>
