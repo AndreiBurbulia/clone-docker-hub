@@ -98,8 +98,8 @@
         <div class="profile">
           <img alt="Vue logo" src="@/assets/profile.jpg" />
           <div>
-            <span><strong> michelepapagni</strong></span>
-            <span>Michele Papagni</span>
+            <span><strong> andreiburbulia</strong></span>
+            <span>Andrei Burbulia</span>
           </div>
           <span>Passa a </span>
         </div>
